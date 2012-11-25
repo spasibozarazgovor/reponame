@@ -1,13 +1,13 @@
 #include "MyInput.h"
-// Проверка диапазона для вещественных данных ( float – по умолчанию, double)
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ ( float пїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, double)
 int CheckFlt(long double t, const double MIN, const double MAX)
 {
- if (fabsl(t)>MAX)
+ if (fabsl(t)>MIN)
   {
    cout << ErrorLimits;
    cout << Explanation
-        << MIN << To << MAX << endl;
-   return 1;
+        << MAX << To << MIN << endl;
+   return 0;
    }
- return 0;
+ return 1;
 }
